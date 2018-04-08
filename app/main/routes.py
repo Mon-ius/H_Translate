@@ -14,17 +14,12 @@ def before_request():
 
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
-
 def index():
     form = PostForm()
-
-
     return render_template(
         'main/index.html',
         title=_('Home'),
-        res=1
-        )
-
+        res=1)
 
 @bp.route('/translate', methods=['POST'])
 def translate_text():
